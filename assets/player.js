@@ -1,1 +1,6 @@
-export default (name, sign, status) => ({ name, sign, status });
+export default (name, sign, status) => {
+  const playMoves = [];
+  return {
+    name, sign, status, playMoves,
+  };
+};

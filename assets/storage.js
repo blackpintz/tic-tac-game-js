@@ -8,14 +8,10 @@ export const gamePlayers = localStorage.getItem('players')
 localStorage.setItem('players', JSON.stringify(gamePlayers));
 JSON.parse(localStorage.getItem('players'));
 
-const playerModule = (() => {
+export default (() => {
   const addPlayer = (playerone, playertwo) => {
-    const signone = 'X';
-    const signtwo = 'O';
-    const statusone = true;
-    const statustwo = false;
-    const firstPlayer = Player(playerone, signone, statusone);
-    const secondPlayer = Player(playertwo, signtwo, statustwo);
+    const firstPlayer = Player(playerone, 'X', true);
+    const secondPlayer = Player(playertwo, 'O', false);
     gamePlayers.push(firstPlayer);
     gamePlayers.push(secondPlayer);
     localStorage.setItem('players', JSON.stringify(gamePlayers));
@@ -34,5 +30,3 @@ const playerModule = (() => {
 
   return { addPlayer, deletePlayers, togglePlayer };
 })();
-
-export { playerModule };

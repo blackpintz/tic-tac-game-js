@@ -12,10 +12,10 @@
             <form id="form" class='w-75 mx-auto mt-3'>
               <div class="row">
                 <div class="col-4">
-                  <input type="text" name="playerone" id="playerone" class="form-control" placeholder="First player">
+                  <input type="text" name="playerone" id="playerone" class="form-control" placeholder="First player" required>
                 </div>
                 <div class="col-4">
-                  <input type="text" name="playertwo" id="playertwo" class="form-control" placeholder="Second player">
+                  <input type="text" name="playertwo" id="playertwo" class="form-control" placeholder="Second player" required>
                 </div>
                 <div class='col-4'>
                   <button type="submit" class="btn btn-primary">Submit</button>
@@ -26,6 +26,7 @@
                 <tbody id="tbody">
                 </tbody>
             </table>
+            <button class="btn btn-info" id='reset'>Reset Game</button>
         </div>
         <script type="module" src="assets/index.js"></script>
     </body>

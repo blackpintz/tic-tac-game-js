@@ -12,6 +12,20 @@ export default () => {
     return playerModule.addPlayer(firstplayer, secondplayer);
   };
 
+  const restartGame = document.getElementById('restart');
+  restartGame.onclick = () => {
+    const cells = [...gameCells];
+    cells.forEach(cell => cell.innerText = '');
+    playerModule.emptyMovesPlayed();
+  };
+
+  const resetGame = document.getElementById('reset');
+  resetGame.onclick = () => {
+    const cells = [...gameCells];
+    cells.forEach(cell => cell.innerText = '');
+    playerModule.deletePlayers();
+  };
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     submitData();

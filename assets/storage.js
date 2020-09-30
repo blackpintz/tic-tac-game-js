@@ -28,5 +28,15 @@ export default (() => {
     localStorage.setItem('players', JSON.stringify(gamePlayers));
   };
 
-  return { addPlayer, deletePlayers, togglePlayer };
+  const emptyMovesPlayed = () => {
+    gamePlayers[0].playMoves = [];
+    gamePlayers[1].playMoves = [];
+    gamePlayers[0].status = true;
+    gamePlayers[1].status = false;
+    localStorage.setItem('players', JSON.stringify(gamePlayers));
+  };
+
+  return {
+    addPlayer, deletePlayers, togglePlayer, emptyMovesPlayed,
+  };
 })();

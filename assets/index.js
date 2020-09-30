@@ -13,6 +13,9 @@ GameBoard.tableArray(GameBoard.cells[6], GameBoard.cells[7], GameBoard.cells[8])
 
 const resetGame = document.getElementById('reset');
 resetGame.onclick = () => {
+  const gameCells = document.getElementsByTagName('td');
+  const cells = [...gameCells];
+  cells.forEach(cell => cell.innerText = '');
   playerModule.deletePlayers();
 };
 

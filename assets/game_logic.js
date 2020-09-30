@@ -66,11 +66,13 @@ export default () => {
   cellsArr.forEach((cell, idx) => {
     cell.addEventListener('click', () => {
       if (gamePlayers.length === 0) {
-        alertMessage();
+        alertMessage().alertNoPlayers();
       } else if (gamePlayers[0].status === true && cell.innerText === '' && winGame(gamePlayers[0]) === false && winGame(gamePlayers[1]) === false) {
         playGame(gamePlayers[0], cell, idx);
+        alertMessage().showCurrentPlayer(gamePlayers[1].name);
       } else if (gamePlayers[1].status === true && cell.innerText === '' && winGame(gamePlayers[0]) === false && winGame(gamePlayers[1]) === false) {
         playGame(gamePlayers[1], cell, idx);
+        alertMessage().showCurrentPlayer(gamePlayers[0].name);
       }
     });
   });

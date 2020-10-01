@@ -2,6 +2,8 @@
 import playerModule, { gamePlayers } from './storage.js';
 /* eslint-disable-next-line import/extensions */
 import alertMessage from './flash.js';
+/* eslint-disable-next-line import/extensions */
+import clickEvent from './clickevent.js';
 
 export default () => {
   const gameCells = document.getElementsByTagName('td');
@@ -15,6 +17,8 @@ export default () => {
   const restartGame = document.getElementById('restart');
   restartGame.onclick = () => {
     const cells = [...gameCells];
+    const playerDisplay = document.getElementById('name');
+    if (playerDisplay !== null) playerDisplay.remove();
     cells.forEach(cell => cell.innerText = '');
     playerModule.emptyMovesPlayed();
   };
@@ -24,12 +28,18 @@ export default () => {
     const cells = [...gameCells];
     cells.forEach(cell => cell.innerText = '');
     playerModule.deletePlayers();
+    alertMessage().showPlayers();
+    clickEvent().disableRestartBtn();
+    clickEvent().disableForm();
   };
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     submitData();
     form.reset();
+    alertMessage().showPlayers();
+    clickEvent().disableRestartBtn();
+    clickEvent().disableForm();
   });
   const cellsArr = [...gameCells];
 

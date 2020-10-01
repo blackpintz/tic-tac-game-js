@@ -16,7 +16,8 @@
     "arrow-parens": "off",
     "no-plusplus": "off",
     "max-len": "off",
-    "no-return-assign": "off"
+    "no-return-assign": "off",
+    "no-unused-expressions": "off"
   },
   "ignorePatterns": [
     "dist/",

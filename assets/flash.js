@@ -1,3 +1,5 @@
+import { gamePlayers } from './storage';
+
 export default () => {
   const alertNoPlayers = () => {
     const content = document.getElementById('alert');
@@ -13,6 +15,21 @@ export default () => {
     return content.appendChild(alertMsg);
   };
 
+  const showPlayers = () => {
+    const playerDiv = document.getElementById('player');
+    const previousPlayers = document.getElementById('allplayers');
+    if (previousPlayers !== null) previousPlayers.remove();
+    const player = document.createElement('p');
+    player.className = 'font-weight-bold';
+    player.id = 'allplayers';
+    if (gamePlayers.length !== 0) {
+      player.innerText = `${gamePlayers[0].name} and ${gamePlayers[1].name} are playing the game.`;
+    } else {
+      player.innerText = 'Players, add your names before you play.';
+    }
+    return playerDiv.appendChild(player);
+  };
+
   const showCurrentPlayer = (player) => {
     const playerDiv = document.getElementById('player');
     const previousPlayer = document.getElementById('name');
@@ -23,5 +40,5 @@ export default () => {
     return playerDiv.appendChild(name);
   };
 
-  return { alertNoPlayers, showCurrentPlayer };
+  return { alertNoPlayers, showCurrentPlayer, showPlayers };
 };

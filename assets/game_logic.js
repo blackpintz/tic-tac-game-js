@@ -84,6 +84,14 @@ export default () => {
         playGame(gamePlayers[1], cell, idx);
         alertMessage().showCurrentPlayer(gamePlayers[0].name);
       }
+
+      if (winGame(gamePlayers[0]) === true) {
+        alertMessage().showWinner(gamePlayers[0].name);
+      }
+
+      if (winGame(gamePlayers[1]) === true) {
+        alertMessage().showWinner(gamePlayers[1].name);
+      }
     });
   });
 

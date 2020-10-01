@@ -1,4 +1,5 @@
-import { gamePlayers } from './storage';
+/* eslint-disable-next-line import/extensions */
+import { gamePlayers } from './storage.js';
 
 export default () => {
   const restartGame = document.getElementById('restart');

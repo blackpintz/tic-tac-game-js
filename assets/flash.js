@@ -1,4 +1,5 @@
-import { gamePlayers } from './storage';
+/* eslint-disable-next-line import/extensions */
+import { gamePlayers } from './storage.js';
 
 export default () => {
   const alertNoPlayers = () => {
@@ -23,11 +24,21 @@ export default () => {
     player.className = 'font-weight-bold';
     player.id = 'allplayers';
     if (gamePlayers.length !== 0) {
-      player.innerText = `${gamePlayers[0].name} and ${gamePlayers[1].name} are playing the game.`;
+      player.innerText = `${gamePlayers[0].name} (${gamePlayers[0].sign}) and ${gamePlayers[1].name} (${gamePlayers[1].sign}) are playing the game.`;
     } else {
       player.innerText = 'Players, add your names before you play.';
     }
     return playerDiv.appendChild(player);
+  };
+
+  const showWinner = (player) => {
+    const playerDiv = document.getElementById('player');
+    const previousPlayer = document.getElementById('name');
+    previousPlayer.remove();
+    const winner = document.createElement('h4');
+    winner.id = 'name';
+    winner.innerText = `Congratulations ${player}, you won the game.`;
+    return playerDiv.appendChild(winner);
   };
 
   const showCurrentPlayer = (player) => {
@@ -40,5 +51,7 @@ export default () => {
     return playerDiv.appendChild(name);
   };
 
-  return { alertNoPlayers, showCurrentPlayer, showPlayers };
+  return {
+    alertNoPlayers, showCurrentPlayer, showPlayers, showWinner,
+  };
 };

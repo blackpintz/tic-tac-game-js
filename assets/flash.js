@@ -41,6 +41,7 @@ export default () => {
     return playerDiv.appendChild(winner);
   };
 
+
   const showCurrentPlayer = (player) => {
     const playerDiv = document.getElementById('player');
     const previousPlayer = document.getElementById('name');

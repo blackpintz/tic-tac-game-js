@@ -5,6 +5,7 @@ import alertMessage from './flash.js';
 /* eslint-disable-next-line import/extensions */
 import clickEvent from './clickevent.js';
 
+
 export default () => {
   const gameCells = document.getElementsByTagName('td');
   const form = document.getElementById('form');
@@ -91,6 +92,11 @@ export default () => {
 
       if (winGame(gamePlayers[1]) === true) {
         alertMessage().showWinner(gamePlayers[1].name);
+      }
+      const noEmptyCell = (val) => val.innerText === 'X' || val.innerText === 'O';
+      if (cellsArr.every(noEmptyCell) && winGame(gamePlayers[0]) === false && winGame(gamePlayers[1]) === false) {
+        const previousPlayer = document.getElementById('name');
+        previousPlayer.innerText = 'Game over with a draw. Play again.';
       }
     });
   });

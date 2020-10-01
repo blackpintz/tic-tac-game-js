@@ -32,13 +32,9 @@ export default () => {
   };
 
   const showWinner = (player) => {
-    const playerDiv = document.getElementById('player');
-    const previousPlayer = document.getElementById('name');
-    previousPlayer.remove();
-    const winner = document.createElement('h4');
-    winner.id = 'name';
-    winner.innerText = `Congratulations ${player}, you won the game.`;
-    return playerDiv.appendChild(winner);
+    const winningPlayer = document.getElementById('name');
+    winningPlayer.innerText = `Congratulations ${player}, you won the game.`;
+    return winningPlayer;
   };
 
 

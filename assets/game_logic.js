@@ -15,6 +15,12 @@ export default () => {
     return playerModule.addPlayer(firstplayer, secondplayer);
   };
 
+  const eventActions = () => {
+    alertMessage().showPlayers();
+    clickEvent().disableRestartBtn();
+    clickEvent().disableForm();
+  };
+
   const restartGame = document.getElementById('restart');
   restartGame.onclick = () => {
     const cells = [...gameCells];
@@ -29,18 +35,14 @@ export default () => {
     const cells = [...gameCells];
     cells.forEach(cell => cell.innerText = '');
     playerModule.deletePlayers();
-    alertMessage().showPlayers();
-    clickEvent().disableRestartBtn();
-    clickEvent().disableForm();
+    eventActions();
   };
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     submitData();
     form.reset();
-    alertMessage().showPlayers();
-    clickEvent().disableRestartBtn();
-    clickEvent().disableForm();
+    eventActions();
   });
   const cellsArr = [...gameCells];
 

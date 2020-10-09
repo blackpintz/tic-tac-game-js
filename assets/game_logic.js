@@ -5,7 +5,6 @@ import alertMessage from './flash.js';
 /* eslint-disable-next-line import/extensions */
 import clickEvent from './clickevent.js';
 
-
 export default () => {
   const gameCells = document.getElementsByTagName('td');
   const form = document.getElementById('form');

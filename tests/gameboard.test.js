@@ -1,4 +1,4 @@
-import GameBoard from '../assets/gameboard';
+import GameBoard from '../src/assets/gameboard';
 
 test('gameboard', () => {
   expect(GameBoard.cells).toHaveLength(9);

@@ -1,9 +1,6 @@
-/* eslint-disable-next-line import/extensions */
-import playerModule, { gamePlayers } from './storage.js';
-/* eslint-disable-next-line import/extensions */
-import alertMessage from './flash.js';
-/* eslint-disable-next-line import/extensions */
-import clickEvent from './clickevent.js';
+import playerModule, { gamePlayers } from './storage';
+import alertMessage from './flash';
+import clickEvent from './clickevent';
 
 export default () => {
   const gameCells = document.getElementsByTagName('td');

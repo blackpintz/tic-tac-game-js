@@ -1,6 +1,6 @@
-import GameLogic from '../assets/game_logic';
-import Player from '../assets/player';
-import { gamePlayers } from '../assets/storage';
+import GameLogic from '../src/assets/game_logic';
+import Player from '../src/assets/player';
+import { gamePlayers } from '../src/assets/storage';
 
 beforeEach(() => {
   const playerone = Player('Lucy', 'X', true);

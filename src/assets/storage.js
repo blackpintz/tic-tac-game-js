@@ -1,5 +1,4 @@
-/* eslint-disable-next-line import/extensions */
-import Player from './player.js';
+import Player from './player';
 
 export const gamePlayers = localStorage.getItem('players')
   ? JSON.parse(localStorage.getItem('players'))
@@ -23,7 +22,7 @@ export default (() => {
   };
 
   const togglePlayer = () => {
-    gamePlayers[0].status = !gamePlayers[0].status;
+    gamePlayers[0].status = !gamePlayers[0].status
     gamePlayers[1].status = !gamePlayers[1].status;
     localStorage.setItem('players', JSON.stringify(gamePlayers));
   };

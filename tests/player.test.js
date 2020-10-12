@@ -1,4 +1,4 @@
-import Player from '../assets/player';
+import Player from '../src/assets/player';
 
 test('player function', () => {
   expect(Player('Rose', 'X', true)).toEqual({

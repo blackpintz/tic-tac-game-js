@@ -1,5 +1,5 @@
-import playerModule, { gamePlayers } from '../assets/storage';
-import Player from '../assets/player';
+import playerModule, { gamePlayers } from '../src/assets/storage';
+import Player from '../src/assets/player';
 
 beforeEach(() => {
   const playerone = Player('Lucy', 'X', true);

@@ -1,6 +1,6 @@
-import clickAction from '../assets/clickevent';
-import Player from '../assets/player';
-import { gamePlayers } from '../assets/storage';
+import clickAction from '../src/assets/clickevent';
+import Player from '../src/assets/player';
+import { gamePlayers } from '../src/assets/storage';
 
 beforeEach(() => {
   const player = Player('Lucy', 'X', true);

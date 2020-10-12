@@ -1,4 +1,4 @@
-import flash from '../assets/flash';
+import flash from '../src/assets/flash';
 
 it('displays game messages', () => {
   document.body.innerHTML = `

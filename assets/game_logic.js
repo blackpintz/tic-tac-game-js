@@ -32,6 +32,8 @@ export default () => {
   const resetGame = document.getElementById('reset');
   resetGame.onclick = () => {
     const cells = [...gameCells];
+    const playerDisplay = document.getElementById('name');
+    if (playerDisplay !== null) playerDisplay.remove();
     cells.forEach(cell => cell.innerText = '');
     playerModule.deletePlayers();
     eventActions();

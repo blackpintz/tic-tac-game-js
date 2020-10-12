@@ -22,7 +22,7 @@ export default (() => {
   };
 
   const togglePlayer = () => {
-    gamePlayers[0].status = !gamePlayers[0].status
+    gamePlayers[0].status = !gamePlayers[0].status;
     gamePlayers[1].status = !gamePlayers[1].status;
     localStorage.setItem('players', JSON.stringify(gamePlayers));
   };

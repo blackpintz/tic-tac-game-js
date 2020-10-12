@@ -102,5 +102,5 @@ export default () => {
     });
   });
 
-  return { cellsArr, winGame };
+  return { cellsArr, winGame, playGame };
 };

@@ -1,5 +1,4 @@
-/* eslint-disable-next-line import/extensions */
-import Player from './player.js';
+import Player from './player';
 
 export const gamePlayers = localStorage.getItem('players')
   ? JSON.parse(localStorage.getItem('players'))

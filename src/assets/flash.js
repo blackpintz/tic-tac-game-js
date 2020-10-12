@@ -37,7 +37,6 @@ export default () => {
     return winningPlayer;
   };
 
-
   const showCurrentPlayer = (player) => {
     const playerDiv = document.getElementById('player');
     const previousPlayer = document.getElementById('name');

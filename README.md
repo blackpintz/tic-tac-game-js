@@ -14,7 +14,7 @@ The project builds a tic tac toe game that you can play on the browser. The game
 
 ## Live Demo 
 
-[Website link](https://rawcdn.githack.com/blackpintz/tic-tac-game-js/52326a79b27cff741e58ba72abf67ad48d1736b9/index.html)
+[Website link](https://raw.githack.com/blackpintz/tic-tac-game-js/test-game-using-jest/dist/index.html)
 
 ## Getting Started
 
@@ -29,6 +29,8 @@ To get a local copy up and running follow these simple example steps.
 - Clone the project.
 - Cd into the project directory.
 - Run ```npm install``` to install linter packages.
+- Run ```npm run build```
+- Run ```npm test``` to see the tests for all files.
 - Open ```index.html``` file on your localhost and play the game.
 
 
